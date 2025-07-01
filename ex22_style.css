@@ -1,0 +1,19 @@
+body{
+    background-color: white;
+}
+
+#colorChanger{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:blue;
+    color: white;
+    min-height: 10rem;
+    font-size: 3rem;
+}
+
+#colorButton{
+    position: relative;
+    min-height: 2rem;
+    left: 48%;
+}
