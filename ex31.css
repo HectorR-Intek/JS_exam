@@ -1,0 +1,11 @@
+body{
+    background-color: white;
+}
+
+p{
+    opacity: 0;
+    display: block;
+    color:white;
+    background-color: green;
+    cursor: pointer;
+}
