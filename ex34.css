@@ -1,0 +1,18 @@
+body{
+    background-color: white;
+}
+
+#container{
+    position: relative;
+    height: 768px;  /*1056 px Equivalent to 11 in*/
+    width: 528px;
+    background-color: aqua;
+}
+
+#ball{
+    background-color: blue;
+    position: relative;
+    height: 1in;
+    width: 1in;
+    border-radius: 100%;
+}

@@ -1,0 +1,17 @@
+body{
+    background-color: white;
+}
+
+#container{
+    position: relative;
+    background-color: blue;
+    width: 1200px;
+}
+
+#animation{
+    position: relative;
+    left: calc(100% - 5rem);
+    background-color: yellow;
+    width: 5rem;
+    height: 5rem;
+}
