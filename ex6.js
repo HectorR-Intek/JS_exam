@@ -1,20 +1,25 @@
+"use strict";
 function months(inputString){
     let words = inputString.split(" ");
-    var aux = [];
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    let aux = [];
     for(let i = 0; i<words.length; i++){
-        if(words[i]=='March'){                  // When March is found...
-            aux = words.slice(i+1);             // I save the rest of the array for later...
-            words.splice(i+1);                  // remove it...
-            words.push("April");                // and add April...
-            words = words.concat(aux);          // then I add the rest of the array back.
-        }
+            let monthIndex = months.indexOf(words[i]);   //Here we save the index of the current month we're checking
+            if(words[i+1] !== months[monthIndex+1]){     // If next month does not match the calendar
+
+                aux = words.slice(i+1);             // I save the rest of the array for later...
+                words.splice(i+1);                  // remove it...
+                words.push(months[monthIndex+1]);   // and add next month...
+                words = words.concat(aux);          // then I add the rest of the array back.
+                i++;                                // I've changed the size of the array so I forward the index.
+            }
     }
-    outputString = "";
+    let outputString = "";
     for(let j = 0; j<words.length; j++){
         outputString += " " + words[j]          // This loop converts the array of strings into a single string.
     }
-    console.log(outputString);
+    return outputString;
 }
 
-inpStr = "January February March January February March";
-months(inpStr);
+const inpStr = "March April May June March April May June";
+console.log(months(inpStr));

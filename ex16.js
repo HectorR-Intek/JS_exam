@@ -1,20 +1,31 @@
-var candidate = {
+"use strict";
+const candidate = {
     name: {
         firstName: "John",
         lastName: "Galt",
-        phone: "123-456-7890",
-    }
+    },
+    phone: "123-456-7890",
 };
 
 candidate.printName = function(){
-        console.log(this.name.firstName+" "+this.name.lastName);
-    };
+        return (this.name.firstName+ " "+ this.name.lastName);
+};
 
-
-candidate.printName();
+console.log(candidate.printName());
 
 const rena = Object.create(candidate);
+rena.name = {
+    ...candidate.name,
+}
 rena.name.firstName = "Renata";
-rena.name.lastName = "Vazquez";
+rena.name.lastName = "Perez";
 
-rena.printName();
+const karla = Object.create(candidate);
+karla.name = {
+    ...candidate.name,
+}
+karla.name.firstName ="Karla";
+karla.name.lastName  ="Arriaga";
+
+console.log(rena.printName());
+console.log(karla.printName());

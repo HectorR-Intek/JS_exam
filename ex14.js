@@ -1,10 +1,10 @@
-function TwoIsParameter(param){
-    if(param===2){
-        return true;
+"use strict";
+function searchForTwo(...args){
+    for(let arg of args){
+        if(arg === 2) return true;
     }
     return false;
 }
 
-console.log(TwoIsParameter("two"));
-console.log(TwoIsParameter(2));
-console.log(TwoIsParameter(2.6));
+console.log(searchForTwo("one", 1.2, "two", 2, "hello", "yes"));
+console.log(searchForTwo(1, 2.4, "yes", true));

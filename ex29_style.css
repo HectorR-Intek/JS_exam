@@ -1,0 +1,24 @@
+body{
+    background-color: white;
+}
+
+div{
+    display: none;
+    background-color: rgb(43, 43, 228);
+    color: white;
+}
+
+#id1{
+    width: 10rem;
+    height: fit-content;
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    border-radius: 5%;
+    background-color: lightskyblue;
+    color: white;
+}
+
+#id1:hover{
+    background-color: blue;
+}

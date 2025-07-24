@@ -1,34 +1,30 @@
-var myName = "my name is Hector";
-var myCity = "I live in Leon";
+"use strict";
+const myName = "my name is Hector";
+const myCity = "I live in Leon";
 
 String.prototype.reverse = function(){
     let reversedString = "";
     for(let i = this.length; i>0; i--){
         reversedString += this[i-1];
     };
-    console.log(reversedString);
+    return reversedString;
 };
 
-String.prototype.reverseWords = function(){
-    let reversedWords ="";
+String.prototype.revWords = function(){
+    let reversedWords = "";
     let words = this.split(" ");
-    for(let i = 0; i<words.length; i++){
-        reversedString ="";
-        newString = words[i];
-        for(let j = newString.length; j>0; j--){
-            reversedString += newString[j-1];
-        };
-        reversedWords += reversedString + " ";
-    };
-    console.log(reversedWords);
- };
+    for(let word of words){
+        reversedWords += word.reverse()+ " ";
+    }
+    return reversedWords;
+}
 
 console.log(myName);
 console.log(myCity);
 
-myName.reverse();
-myCity.reverse();
+console.log(myName.reverse());
+console.log(myCity.reverse());
 
-myName.reverseWords();
-myCity.reverseWords();
+console.log(myName.revWords());
+console.log(myCity.revWords());
 

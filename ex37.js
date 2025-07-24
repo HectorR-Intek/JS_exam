@@ -1,22 +1,16 @@
 //Ex. 37
-
+"use strict";
 String.prototype.exclamation = function(){
-    console.log(this.valueOf()+"!");
+    console.log(`${this}!`);
 }
 
 "Hello".exclamation();
 "Hello World".exclamation();
 
-//addition function 
+// Addition function with ES6 syntax
 
-function add(...numbers){
-    total = 0;
-    for(num of numbers){
-        total += num;
-    }
-    console.log(total);
-}
+const add = (...numbers) => numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 
-add(2,5);
-add(7, 11);
-add(12, 8, 5, 6);
+console.log(add(2,5));
+console.log(add(7, 11));
+console.log(add(12, 8, 5, 6));

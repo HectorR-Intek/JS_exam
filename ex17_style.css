@@ -1,0 +1,13 @@
+body{
+    background-color: white;
+}
+
+#body div.info :nth-child(1){
+    background-color: green;
+    color: white;
+}
+
+#body div.info :nth-child(2){
+    background-color: rgb(162, 5, 201);
+    color: white;
+}

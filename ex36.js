@@ -1,12 +1,13 @@
+"use strict";
 function myPowerFn(base){
     return function (exponent){
-        console.log(base**exponent);
+        return base**exponent;
     }
 };
 
-n = myPowerFn(3);
-n(2);               //Up to here, same as in the exam.
+const n = myPowerFn(3);
+console.log(n(2));               //Up to here, same as in the exam.
 
 
-n(4);
-n(5); // More cases to check if closure works.
+console.log(n(4));
+console.log(n(5));              // More cases to check if closure works.

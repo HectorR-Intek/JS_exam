@@ -3,9 +3,13 @@ body{
 }
 
 p{
-    opacity: 0;
     display: block;
     color:white;
     background-color: green;
     cursor: pointer;
+}
+
+p:nth-child(2n){
+    background-color: blue;
+    display: none;
 }
