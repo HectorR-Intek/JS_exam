@@ -1,9 +1,8 @@
 "use strict";
-let arreglo = [1, 2, 3, 4];
+let testArray = [1, 2, 3, 4];
 
-Array.prototype.duplicate = function(){
-    this.forEach(x => this.push(x));
-    return this;
-}
+Array.prototype.duplicate = function () {
+  return this.concat(this);
+};
 
-console.log(arreglo.duplicate());
+console.log(testArray.duplicate());
