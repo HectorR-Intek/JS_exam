@@ -2,9 +2,12 @@
 function isInvalidInput(value) {
   const keyboardRows = [
     "1234567890",
+    "0987654321",
     "qwertyuiop",
+    "poiuytrewq",
     "asdfghjkl",
-    "zxcvbnm"
+    "lkjhgfdsa",
+    "zxcvbnm",
   ];
 
   const val = value.toLowerCase();
@@ -17,16 +20,16 @@ function isInvalidInput(value) {
       }
     }
   }
-  return false; 
+  return false;
 }
 
 const input = document.getElementById("userInput");
 const warning = document.getElementById("warning");
 
-input.addEventListener("input", function() {
-    if (isInvalidInput(this.value)) {
-      warning.style.display = "block";
-    } else {
-      warning.style.display = "none";
-    }
+input.addEventListener("input", function () {
+  if (isInvalidInput(this.value)) {
+    warning.style.display = "block";
+  } else {
+    warning.style.display = "none";
+  }
 });
