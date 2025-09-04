@@ -5,30 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise 18</title>
     <link rel="stylesheet" href="ex18.css">
+    <script src="ex18.js" defer></script>
 </head>
 <body>
     <h2>Exercise 18: Interactive Table</h2>
     <table>
         <thead>
-            <td contenteditable="true">Name</td>
-            <td contenteditable="true">Last Name</td>
-            <td contenteditable="true">Phone</td>
+            <td contenteditable="false">Name</td>
+            <td contenteditable="false">Last Name</td>
+            <td contenteditable="false">Phone</td>
+            <td>Enable edition</td>
             <td>Add Row (+)</td>
         </thead>
         <tr>
-            <td contenteditable="true">John</td>
-            <td contenteditable="true">Galt</td>
-            <td contenteditable="true">555-123-4567</td>
+            <td contenteditable="false">John</td>
+            <td contenteditable="false">Galt</td>
+            <td contenteditable="false">555-123-4567</td>
+            <td class="editCol">Edit Cell</td>
             <td class="lastCol">Delete</td>
         </tr>
         <tr>
-            <td contenteditable="true">Karla</td>
-            <td contenteditable="true">Arriaga</td>
-            <td contenteditable="true">555-789-1011</td>
+            <td contenteditable="false">Karla</td>
+            <td contenteditable="false">Arriaga</td>
+            <td contenteditable="false">555-789-1011</td>
+            <td class ="editCol">Edit Cell</td>
             <td class="lastCol">Delete</td>
         </tr>
     </table>
     
-    <script src="ex18.js"></script>
+    
 </body>
 </html>
